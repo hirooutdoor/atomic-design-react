@@ -1,7 +1,10 @@
+import { BrowserRouter } from "react-router-dom";
 import { PrimaryButton } from "./compoenents/atoms/button/PrimaryButton";
 import { SecondaryButton } from "./compoenents/atoms/button/SecondaryButton";
 import { SearchInput } from "./compoenents/molecules/SearchInput";
 import { UserCard } from "./compoenents/organisms/user/UserCard";
+import { DefaultLayout } from "./compoenents/templates/DefaultLayout";
+import { HeaderOnly } from "./compoenents/templates/HeaderOnly";
 import "./styles.css";
 
 const user = {
@@ -17,11 +20,13 @@ const user = {
 
 export default function App() {
   return (
-    <div className="App">
-      <PrimaryButton>Test</PrimaryButton>
-      <SecondaryButton>Search</SecondaryButton>
-      <SearchInput />
-      <UserCard user={user} />
-    </div>
+    <BrowserRouter>
+      <DefaultLayout>
+        <PrimaryButton>Test</PrimaryButton>
+        <SecondaryButton>Search</SecondaryButton>
+        <SearchInput />
+        <UserCard user={user} />
+      </DefaultLayout>
+    </BrowserRouter>
   );
 }
