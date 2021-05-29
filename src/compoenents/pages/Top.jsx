@@ -1,9 +1,12 @@
 import styled from "styled-components";
 import { SecondaryButton } from "../atoms/button/SecondaryButton";
+import { useHistory } from "react-router-dom";
 
 export const Top = () => {
-  const onClickAdmin = () => alert("Admin");
-  const onClickGeneral = () => alert("General");
+  const history = useHistory();
+
+  const onClickAdmin = () => history.push("/users");
+  const onClickGeneral = () => history.push("/users");
 
   return (
     <SContainer>
