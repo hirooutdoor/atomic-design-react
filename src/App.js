@@ -4,7 +4,6 @@ import { SecondaryButton } from "./compoenents/atoms/button/SecondaryButton";
 import { SearchInput } from "./compoenents/molecules/SearchInput";
 import { UserCard } from "./compoenents/organisms/user/UserCard";
 import { DefaultLayout } from "./compoenents/templates/DefaultLayout";
-import { HeaderOnly } from "./compoenents/templates/HeaderOnly";
 import "./styles.css";
 
 const user = {
